@@ -155,6 +155,9 @@ class Search:
                 if 'movieRenderer' in video_details:
                     continue
 
+                if 'showingResultsForRenderer' in video_details:
+                    continue
+
                 if 'videoRenderer' not in video_details:
                     logger.warning('Unexpected renderer encountered.')
                     logger.warning(f'Renderer name: {video_details.keys()}')
